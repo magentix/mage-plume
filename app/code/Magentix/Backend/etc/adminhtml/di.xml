@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Magento\Backend\App\Action\Plugin\Authentication" type="Magentix\Backend\App\Action\Plugin\Authentication" />
+    <preference for="Magento\Backend\Model\Menu\Director\Director" type="Magentix\Backend\Model\Director\Director" />
+    <!-- The menu writes a debug message for every item added: give it a logger that writes nothing -->
+    <type name="Magento\Backend\Model\Menu">
+        <arguments>
+            <argument name="logger" xsi:type="object">Psr\Log\NullLogger</argument>
+        </arguments>
+    </type>
+</config>

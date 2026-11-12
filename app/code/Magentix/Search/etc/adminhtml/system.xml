@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="catalog">
+            <group id="search">
+                <field id="magentix_typo_enabled" translate="label comment" type="select" sortOrder="110" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Typo Tolerance (MySQL Legacy)</label>
+                    <comment>Unknown words in the search query are replaced with the closest word of the catalog (Damerau-Levenshtein distance).</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <config_path>catalog/search/magentix_typo_enabled</config_path>
+                    <depends>
+                        <field id="engine">lmysql</field>
+                    </depends>
+                </field>
+                <field id="magentix_typo_min_length" translate="label comment" type="text" sortOrder="111" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Typo Tolerance Minimum Word Length</label>
+                    <comment>Shorter words are never corrected. One typo is accepted up to 5 characters, two typos from 6 characters (a swap of two adjacent letters counts as one typo).</comment>
+                    <validate>required-entry validate-digits validate-digits-range digits-range-3-20</validate>
+                    <config_path>catalog/search/magentix_typo_min_length</config_path>
+                    <depends>
+                        <field id="engine">lmysql</field>
+                        <field id="magentix_typo_enabled">1</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

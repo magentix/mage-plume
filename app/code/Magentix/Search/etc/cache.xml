@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Cache/etc/cache.xsd">
+    <type name="magentix_search" translate="label,description" instance="Magentix\Search\Model\Cache\Type\TypoDictionary">
+        <label>Search Typo Dictionary</label>
+        <description>Catalog words used to correct search typos. Refresh after adding or updating products, or hourly with the server cron.</description>
+    </type>
+</config>

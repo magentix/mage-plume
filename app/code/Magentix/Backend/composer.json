@@ -1,0 +1,21 @@
+{
+    "name": "magentix/magento-module-backend",
+    "description": "Admin tweaks for Magento: direct redirection after login, quiet admin menu and cache invalidation logs",
+    "type": "magento2-module",
+    "version": "100.1.3",
+    "license": "BSD-2-Clause",
+    "require": {
+        "php": ">=8.0",
+        "magento/framework": "*",
+        "magento/module-backend": "*",
+        "magento/module-sales": "*"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Magentix\\Backend\\": ""
+        }
+    }
+}

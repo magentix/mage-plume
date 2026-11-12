@@ -1,0 +1,6 @@
+"Typo Tolerance (MySQL Legacy)","Tolérance aux fautes de frappe (MySQL Legacy)"
+"Unknown words in the search query are replaced with the closest word of the catalog (Damerau-Levenshtein distance).","Les mots inconnus de la recherche sont remplacés par le mot le plus proche du catalogue (distance de Damerau-Levenshtein)."
+"Typo Tolerance Minimum Word Length","Tolérance aux fautes : longueur minimale des mots"
+"Shorter words are never corrected. One typo is accepted up to 5 characters, two typos from 6 characters (a swap of two adjacent letters counts as one typo).","Les mots plus courts ne sont jamais corrigés. Une faute est acceptée jusqu'à 5 caractères, deux fautes à partir de 6 caractères (l'inversion de deux lettres voisines compte pour une faute)."
+"Search Typo Dictionary","Dictionnaire de la recherche (fautes de frappe)"
+"Catalog words used to correct search typos. Refresh after adding or updating products, or hourly with the server cron.","Mots du catalogue utilisés pour corriger les fautes de frappe. À actualiser après l'ajout ou la modification de produits, ou toutes les heures par le cron du serveur."

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <!-- Never displayed in the admin: declared only so that bin/magento config:set accepts the path -->
+        <section id="magentix_security" showInDefault="0" showInWebsite="0" showInStore="0">
+            <group id="csp" showInDefault="0" showInWebsite="0" showInStore="0">
+                <field id="policy" type="text" showInDefault="0" showInWebsite="0" showInStore="0"/>
+            </group>
+        </section>
+    </system>
+</config>

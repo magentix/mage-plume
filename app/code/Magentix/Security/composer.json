@@ -1,0 +1,23 @@
+{
+    "name": "magentix/magento-module-security",
+    "description": "Security hardening for Magento: configurable Content-Security-Policy header, SessionReaper and PolyShell mitigations",
+    "type": "magento2-module",
+    "version": "101.0.0",
+    "license": "BSD-2-Clause",
+    "require": {
+        "php": ">=8.3",
+        "magento/framework": "*",
+        "magento/module-catalog": "*",
+        "magento/module-config": "*",
+        "magento/module-customer": "*",
+        "magento/module-store": "*"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Magentix\\Security\\": ""
+        }
+    }
+}

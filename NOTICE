@@ -1,0 +1,29 @@
+Mage Plume
+Copyright (c) 2026 Magentix
+
+Mage Plume is a lightweight setup of Magento Open Source. It contains components under different licenses,
+listed below. Each component keeps its own license.
+
+Magento Open Source
+    Not included in this repository: installed by Composer from repo.magento.com.
+    License: OSL-3.0 and AFL-3.0.
+    Magento is a trademark of Adobe Inc. Mage Plume is not affiliated with or endorsed by Adobe.
+
+composer.json
+    Derived from magento/project-community-edition.
+    License: OSL-3.0 and AFL-3.0.
+
+m2-hotfixes/*.patch
+    Security patches published by Adobe for Magento Open Source.
+    License: OSL-3.0.
+
+app/code/Swissup/SearchMysqlLegacy
+    swissup/module-search-mysql-legacy 1.1.14, Copyright (c) Swissup and Magento, Inc.
+    Includes code derived from Magento Open Source.
+    License: OSL-3.0, see app/code/Swissup/SearchMysqlLegacy/LICENSE.txt.
+
+app/code/Magentix/Backend
+app/code/Magentix/Search
+app/code/Magentix/Security
+    Copyright (c) 2026 Magentix.
+    License: BSD 2-Clause, see the LICENCE file of each module.

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <!-- Correct typos in full-text queries before the MySQL MATCH ... AGAINST -->
+    <type name="Swissup\SearchMysqlLegacy\SearchAdapter\Mysql\Query\Builder\MatchBuilder">
+        <arguments>
+            <argument name="preprocessors" xsi:type="array">
+                <item name="magentixTypoPreprocessor" xsi:type="object">Magentix\Search\Preprocessor\Typo</item>
+            </argument>
+        </arguments>
+    </type>
+    <!-- Rebuild the dictionary when its cache type is refreshed, and after every cache flush -->
+    <type name="Magento\Framework\App\Cache\TypeListInterface">
+        <plugin name="magentix_search_refresh_dictionary" type="Magentix\Search\Plugin\RefreshDictionary"/>
+    </type>
+    <type name="Magento\Framework\App\Cache\Manager">
+        <plugin name="magentix_search_refresh_dictionary" type="Magentix\Search\Plugin\RefreshDictionary"/>
+    </type>
+    <!-- Do not record search terms containing a typo in the search history -->
+    <type name="Magento\Search\Model\ResourceModel\Query">
+        <plugin name="magentix_search_skip_typo_search_term" type="Magentix\Search\Plugin\SkipTypoSearchTerm"/>
+    </type>
+    <!-- Cache cleaning runs in every context (setup, CLI): load the dictionary only when needed -->
+    <type name="Magentix\Search\Plugin\RefreshDictionary">
+        <arguments>
+            <argument name="dictionary" xsi:type="object">Magentix\Search\Model\Dictionary\Proxy</argument>
+        </arguments>
+    </type>
+</config>

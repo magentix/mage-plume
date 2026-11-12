@@ -1,0 +1,26 @@
+{
+    "name": "magentix/magento-module-search",
+    "description": "Typo tolerance for the Magento MySQL Legacy search engine (Damerau-Levenshtein distance)",
+    "type": "magento2-module",
+    "version": "100.0.0",
+    "license": "BSD-2-Clause",
+    "require": {
+        "php": ">=8.3",
+        "magento/framework": "*",
+        "magento/module-backend": "*",
+        "magento/module-catalog": "*",
+        "magento/module-catalog-search": "*",
+        "magento/module-config": "*",
+        "magento/module-search": "*",
+        "magento/module-store": "*",
+        "swissup/module-search-mysql-legacy": "*"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Magentix\\Search\\": ""
+        }
+    }
+}
