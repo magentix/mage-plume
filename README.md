@@ -1,5 +1,7 @@
 # Mage Plume
 
+![Plume](plume.png)
+
 Lightweight Magento Open Source setup, for small servers and shared hosting.
 
 - Unused modules removed (`replace` section of `composer.json`): smaller install, less memory, faster builds.
