@@ -6,4 +6,7 @@
     <type name="Magento\Framework\Api\ImageProcessor">
         <plugin name="magentix_security_restrict_upload_extensions" type="Magentix\Security\Plugin\ImageProcessorRestrictExtensions"/>
     </type>
+    <type name="Magento\Catalog\Model\Webapi\Product\Option\Type\File\Processor">
+        <plugin name="magentix_security_disable_webapi_custom_option_file_upload" type="Magentix\Security\Plugin\DisableWebapiCustomOptionFileUpload" sortOrder="1"/>
+    </type>
 </config>

@@ -73,6 +73,9 @@ MIME type but not the file extension, allowing polyglot files (valid image + emb
 This module enforces an extension allowlist (`jpg`, `jpeg`, `gif`, `png`) at both the validator
 and uploader level.
 
+Custom option file uploads through the API are also blocked entirely, as this feature is only
+used by attackers. Customers can still upload files from the product page.
+
 ## License
 
 BSD 2-Clause, see [LICENCE](LICENCE).
